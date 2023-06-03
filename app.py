@@ -1,5 +1,5 @@
 email = input('Enter your email: ')
-k = 0
+k, j=0,0
 if len(email) >= 6:
     if email[0].isalpha():
         if ('@' in email) and (email.count("@") == 1): 
@@ -8,8 +8,11 @@ if len(email) >= 6:
                   if i ==i.isspace():
                       k=1
                   elif i.isalpha():
-                      if i==i.upper()
-              if k==1:
+                      if i==i.upper():
+                          j=1
+                  elif i.isdigit():
+                      continue
+              if k==1 or j==1:
                   print('The email is incorrect')                      
           else:
               print('The email address entered is not valid')
